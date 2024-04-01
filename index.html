@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Sales</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .car {
+        width: 300px;
+        margin: 20px;
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .car img {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 10px;
+    }
+
+    .car h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .car p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    a {
+        color: antiquewhite;
+    }
+</style>
+</head>
+<body>
+  <!-- Navigation bar -->
+
+  <header>
+    <h1>BROWN Auto Sales LLC</h1>
+
+    <h3>
+        <a href="#home">Home</a>
+        | 
+        <a href="#about">Who we are</a>
+        |   
+        <a href="#testimonials">Testimonials</a>
+        |
+        <a href="#Inquire-Us">Send your Inquiries</a>
+    </h3>
+</header>
+  
+
+  <!-- Homepage -->
+  <!--<h1>Welcome to Brown Car Sales</h1>-->
+  <section id="home">
+    
+    <div class="car">
+        <img src="car1.jpeg" alt="Car 1">
+        <h2>Nisssan Altima</h2>
+        <p>Year: 2022</p>
+        <p>Price: $30,000</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="car">
+        <img src="car1.jpeg" alt="Car 1">
+        <h2>Nissan Altima lx</h2>
+        <p>Year: 2022</p>
+        <p>Price: $30,000</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="car">
+            <div class="carousel">
+              <img class="carousel-image active" src="Kia1.jpeg" alt="Car 2 Image 1">
+              <img class="carousel-image" src="Kia2.jpeg" alt="Car 2 Image 2">
+              <img class="carousel-image" src="Kia3.jpeg" alt="Car 2 Image 3">
+              <!-- Add more images as needed -->
+              <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+              <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <h2>Nissan Altima SX</h2>
+            <p>Year: 2023</p>
+            <p>Price: $35,000</p>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          
+          <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-image');
+          
+            function showSlide(n) {
+              slides[currentSlide].classList.remove('active');
+              currentSlide = (n + slides.length) % slides.length;
+              slides[currentSlide].classList.add('active');
+            }
+          
+            function changeSlide(n) {
+              showSlide(currentSlide + n);
+            }
+          </script>
+          
+           <style>
+            .carousel {
+              position: relative;
+              max-width: 100%;
+              overflow: hidden;
+              display: inline-block;
+              position: relative;
+            }
+          
+            .carousel-image {
+              display: none;
+              width: 100%;
+              height: auto;
+            }
+          
+            .carousel-image.active {
+              display: block;
+            }
+          
+            .carousel button {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              background-color: rgba(255, 255, 255, 0.5);
+              border: none;
+              cursor: pointer;
+              padding: 10px;
+              z-index: 2;
+              transition: background-color 0.3s;
+            }
+          
+            .carousel button:hover {
+              background-color: rgba(255, 255, 255, 0.8);
+            }
+          
+            .carousel .prev {
+              left: 0;
+            }
+          
+            .carousel .next {
+              right: 0;
+            }
+          </style>
+          
+      
+      <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+      
+        function showSlide(n) {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (n + slides.length) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }
+      
+        function changeSlide(n) {
+          showSlide(currentSlide + n);
+        }
+      </script>
+      
+      <style>
+        .carousel {
+          position: relative;
+          max-width: 100%;
+          overflow: hidden;
+        }
+      
+        .carousel-image {
+          display: none;
+          width: 100%;
+          height: auto;
+        }
+      
+        .carousel-image.active {
+          display: block;
+        }
+      
+        .navigation {
+          margin-top: 10px;
+        }
+      </style>
+      
+    <!-- Inquiry form -->
+    
+  </section>
+
+  <!-- About Us page -->
+  <section id="about">
+    <!--<h2>About Us</h2>
+    <p>Your business description goes here.</p>-->
+    <article>
+        <h2>About Us</h2>
+        <p>Welcome to Brown Auto Sales LLC, your go-to destination for finding the perfect car for your needs. We are passionate about providing high-quality vehicles and excellent service to our customers.</p>
+    
+        <p>Our mission is to make the process of buying a car simple, enjoyable, and transparent. Whether you are looking for a sleek sedan, a spacious SUV, or a powerful sports car, we have a diverse range of options to suit every taste and budget.</p>
+    
+        <p>At Brown Auto Sales LLC, we prioritize customer satisfaction. Our team of experienced professionals is dedicated to assisting you throughout the entire car-buying journey. From browsing our selection to financing and finalizing the purchase, we are here to make the process seamless.</p>
+    
+        <p>Feel free to explore our website, view our latest inventory, and contact us with any questions you may have. Thank you for choosing Car Sale Website for your automotive needs!</p>
+    </article>
+  </section>
+  
+
+
+  <!-- Testimonials page -->
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <p>Customer testimonials go here.</p>
+  </section>
+  <section id="Inquire-Us">
+    <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Mobile Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+        <label for="message">Ask us something:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
+  </section>
+
+</body>
+</html>
